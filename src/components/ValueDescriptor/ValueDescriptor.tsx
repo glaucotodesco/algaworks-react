@@ -1,15 +1,17 @@
 import * as VD from './ValueDescriptor.styles';
 
+export type VariantType = 'default' | 'primary';
+
 export interface ValueDescriptorProps {
+    variant: VariantType;
     description: string;
     value: number;
-    color: 'primary' | 'default';
+    color: string;
     isCurrency ?: boolean;
 }
 
-export default function ValueDescriptor (props : ValueDescriptorProps){
-    return  <VD.Wrapper>
-            
+export default function ValueDescriptor ({variant, ...props} : ValueDescriptorProps){
+    return  <VD.Wrapper  variant={variant}>
                <span className="Descriptor">{props.description}</span>
                <div>
                   {

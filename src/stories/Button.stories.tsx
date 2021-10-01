@@ -1,9 +1,9 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import Button, {ButtonProps} from '../components/Button/Button';
+import Button from '../components/Button/Button';
 
 export default {
-  title: 'Example/Button',
+  title: 'Components/Button',
   component: Button,
   //argTypes: {
   //  backgroundColor: { control: 'color' },

@@ -60,10 +60,9 @@ const THEME ={
 
 
 
-export const Wrapper = styled.button<{
-    variant: VariantType;
-}>`
+export const Wrapper = styled.button<{variant: VariantType}>`
     padding:  4px 8px;
+    margin: 4px;
     border: 1px solid ${p=>THEME[p.variant].bg};
     color: ${p=>THEME[p.variant].color};
     background-color: ${p=>THEME[p.variant].bg};
