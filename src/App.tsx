@@ -1,7 +1,6 @@
-import React, { useMemo } from 'react';
-import logo from './logo.svg';
+import React, { useEffect, useMemo, useState } from 'react';
 import './App.css';
-import Table from './components/Table/Table';
+
 
 
 type Post = {
@@ -19,6 +18,12 @@ type Post = {
 }
 
 function App() {
+
+  const [loading, setLoading] = useState(false);
+
+  useEffect( () => {
+     console.log(loading);
+  });
 
   const data = useMemo<Post[]>(
     () => [
@@ -67,7 +72,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-          <Table />
+          
         
       </header>
     </div>

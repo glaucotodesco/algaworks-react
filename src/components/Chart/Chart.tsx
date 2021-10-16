@@ -56,7 +56,7 @@ export default function Chart({ data, title }: ChartProps) {
     {
       data ?
         <Line
-          typeof="line"
+          type="line"
           data={data}
           height={139}
           width={600}
