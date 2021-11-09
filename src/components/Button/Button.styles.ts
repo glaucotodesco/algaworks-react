@@ -79,3 +79,14 @@ export const Wrapper = styled.button<{variant: VariantType}>`
         border-color: ${p => THEME[p.variant].disabled.border_color}
     }
 `;
+
+export const Label = styled.label`
+   div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+      
+        
+   }
+`

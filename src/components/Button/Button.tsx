@@ -1,11 +1,11 @@
-import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
+import { ButtonHTMLAttributes } from 'react';
 import * as B from './Button.styles';
 
 export type VariantType = 'danger' | 'text' | 'primary';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
     variant: VariantType;
-    label: string;
+    label: string  | React.ReactNode;
 }
 
 export default function Button ( {variant, label, ...props} : ButtonProps){
@@ -13,6 +13,8 @@ export default function Button ( {variant, label, ...props} : ButtonProps){
                 variant={variant}
                 {...props}
             >
-                {label}
+                <B.Label>
+                    {label}
+                </B.Label>
             </B.Wrapper>
 }
