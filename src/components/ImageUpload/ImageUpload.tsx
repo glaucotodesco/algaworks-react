@@ -39,7 +39,7 @@ function ImageUpload(props: ImageUploadProps) {
     </IU.ImagePreviewWrapper>
 
 
-  return <IU.Wrapper preview={filePreview}>
+  return <IU.Wrapper>
     <IU.Label>
       <Icon size={'24px'} path={mdiUpload} />
       {props.label}
